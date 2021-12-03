@@ -1,0 +1,25 @@
+package dayXXTemplate;
+
+import java.util.List;
+
+import static Utils.Utils.readFile;
+
+public class DayXXTemplate {
+
+    public static void main(String[] args) {
+
+        first();
+        second();
+    }
+
+    private static void first() {
+        List<String> input = readFile("PATH");
+        System.out.println("result");
+    }
+
+    private static void second() {
+        List<String> input = readFile("PATH");
+        System.out.println("result");
+    }
+
+}
