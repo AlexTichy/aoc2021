@@ -8,18 +8,23 @@ public class DayXXTemplate {
 
     public static void main(String[] args) {
 
-        first();
-        second();
+        String input_file = "PATH";
+
+        int first_solution = first(input_file);
+        System.out.println("First solution: " + first_solution);
+
+        int second_solution = second(input_file);
+        System.out.println("Second solution: " + second_solution);
     }
 
-    private static void first() {
-        List<String> input = readFile("PATH");
-        System.out.println("result");
+    static int first(String input_file) {
+        List<String> input = readFile(input_file);
+        return -1;
     }
 
-    private static void second() {
-        List<String> input = readFile("PATH");
-        System.out.println("result");
+    static int second(String input_file) {
+        List<String> input = readFile(input_file);
+        return -1;
     }
 
 }
