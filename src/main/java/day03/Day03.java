@@ -11,7 +11,6 @@ public class Day03 {
 
     public static void main(String[] args) {
 
-        //String input_file = "D:\\aoc2021\\src\\test\\java\\day03\\input03test.txt";
         String input_file = "src\\main\\java\\day03\\input03.txt";
         int first_solution = first(input_file);
         System.out.println(first_solution);

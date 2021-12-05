@@ -1,14 +1,9 @@
 package Utils;
 
 import lombok.SneakyThrows;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDate;
 
 public class DailySetupHelper {
@@ -23,11 +18,14 @@ public class DailySetupHelper {
         String folder = String.format(folderPattern, dayOfMonth);
 
         File inputFile = new File(folder + String.format(inputFilePattern, dayOfMonth));
-        inputFile.getParentFile().mkdirs();
-        inputFile.createNewFile();
-
-        copyClass(dayOfMonth, folder);
-
+        if(!inputFile.getParentFile().exists()){
+            inputFile.getParentFile().mkdirs();
+            inputFile.createNewFile();
+            copyClass(dayOfMonth, folder);
+            System.out.println("Created new directory for day " + dayOfMonth + ".");
+        }else{
+            System.out.println("Directory for day " + dayOfMonth + " already exists.");
+        }
     }
 
     @SneakyThrows

@@ -1,6 +1,5 @@
 package day04;
 
-import java.sql.Array;
 import java.util.*;
 
 import static Utils.Utils.readFile;
