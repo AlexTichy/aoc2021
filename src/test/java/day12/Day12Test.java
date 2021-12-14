@@ -1,6 +1,7 @@
 package day12;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 
 import java.util.Arrays;
 
@@ -10,13 +11,13 @@ class Day12Test {
 
     @Test
     void first() {
-        int solution = Day12.first("D:\\aoc2021\\src\\test\\java\\day12\\input12test.txt");
+        int solution = Day12.first("day12\\input12test.txt");
         assertEquals(10, solution);
     }
 
     @Test
     void second() {
-        int solution = Day12.second("D:\\aoc2021\\src\\test\\java\\day12\\input12test.txt");
+        int solution = Day12.second("day12\\input12test.txt");
         assertEquals(36, solution);
     }
 
