@@ -17,4 +17,16 @@ public class Utils {
             return br.lines().collect(Collectors.toList());
         }
     }
+
+    public static int[][] parseIntGrid(List<String> input) {
+        int[][] grid = new int[input.size()][];
+        for (int i = 0; i < input.size(); i++) {
+            char[] line = input.get(i).toCharArray();
+            grid[i] = new int[line.length];
+            for (int j = 0; j < line.length; j++) {
+                grid[i][j] = Integer.parseInt(String.valueOf(line[j]));
+            }
+        }
+        return grid;
+    }
 }

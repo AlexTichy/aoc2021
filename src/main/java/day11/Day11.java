@@ -3,6 +3,7 @@ package day11;
 import java.awt.*;
 import java.util.List;
 
+import static Utils.Utils.parseIntGrid;
 import static Utils.Utils.readFile;
 
 public class Day11 {
@@ -20,14 +21,7 @@ public class Day11 {
 
     static long first(String input_file) {
         List<String> input = readFile(input_file);
-        int[][] energy_map = new int[input.size()][];
-        for(int i = 0; i < input.size(); i++){
-            char[] line = input.get(i).toCharArray();
-            energy_map[i] = new int[line.length];
-            for(int j = 0; j< line.length; j++){
-                energy_map[i][j] = Integer.parseInt(String.valueOf(line[j]));
-            }
-        }
+        int[][] energy_map = parseIntGrid(input);
 
         long flashes_total = 0;
         for(int step = 1; step <= 100; step ++){
@@ -44,14 +38,7 @@ public class Day11 {
 
     static int second(String input_file) {
         List<String> input = readFile(input_file);
-        int[][] energy_map = new int[input.size()][];
-        for(int i = 0; i < input.size(); i++){
-            char[] line = input.get(i).toCharArray();
-            energy_map[i] = new int[line.length];
-            for(int j = 0; j< line.length; j++){
-                energy_map[i][j] = Integer.parseInt(String.valueOf(line[j]));
-            }
-        }
+        int[][] energy_map = parseIntGrid(input);
         int step = 1;
         for(; ; step ++){
             increment(energy_map);
